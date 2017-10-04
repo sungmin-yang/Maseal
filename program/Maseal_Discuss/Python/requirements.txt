@@ -1,0 +1,8 @@
+# Python library
+
+1. simplexml : very simply manipulating XML files
+> from simplexml import XML, XMLList, parser
+
+2. multitask
+
+You need to include py-audio module from http://code.google.com/p/py-audio in your path.
