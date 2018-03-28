@@ -24,17 +24,17 @@ Return     :
 Background : Korea(local), engineer(field), Computer Science(study area), 40years old(generation)
 Query      : Mountain
 Return     :
-		  a. customized : Mountain Computer Inc/org(proper name) in local/general
-		(b). customized : semntic converter -> (background) mountain for computer -> fail
-											-> (background) computer for mountain -> fail (not significant result)
-											-> (background) laptop(closest word vector) for mountain   -> fail (not significant result)
-											-> (background) software(secod closest word vector) for mountain -> MountainsMap(Software) (Success)
+	a. customized : Mountain Computer Inc/org(proper name) in local/general
+      (b). customized : semntic converter -> (background) mountain for computer -> fail
+			-> (background) computer for mountain -> fail (not significant result)
+			-> (background) laptop(closest word vector) for mountain   -> fail (not significant result)
+			-> (background) software(secod closest word vector) for mountain -> MountainsMap(Software) (Success)
 
-		  c. customized : not so related to background -> attach to general and local/general -> collection of news of mountain(flood, earthquake, etc.)
-		  d. local      : Recommened mountains (in local area)
-		(e). local      : Hiking community (in local area)
-		  f. general 	: Mountain(scenery pic) - dictionary(wiki, history, theory, etc.)
-		  g. etc. 		: Band, Song, TV, Youtube, ...
+	c. customized : not so related to background -> attach to general and local/general -> collection of news of mountain(flood, earthquake, etc.)
+	d. local      : Recommened mountains (in local area)
+      (e). local      : Hiking community (in local area)
+	f. general 	: Mountain(scenery pic) - dictionary(wiki, history, theory, etc.)
+	g. etc. 		: Band, Song, TV, Youtube, ...
 
 
 # ============================ Case 3 -> 5results ============================
