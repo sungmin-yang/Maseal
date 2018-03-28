@@ -1,3 +1,57 @@
+# Stretype Search
+Input : words/phrase/clase/sentence
+Output : 0-7 results
+		 0   -> No match
+		 1-4 -> very rare
+		 5   -> default
+		 7   -> customized
+
+
+
+# ============================ Case 1 -> 7results ============================
+Background : Sweden(location), salesman(field), business(study area), 20years old(generation)
+Query      : north koea -> North Korea (auto correction)
+Return     :
+          a. customized : org related to North Korea in local/general.
+        (b). customized : semntic converter -> business + salesman + North Korea -> trade policy/trend/product/company/stock market relate to North Korea
+          c. customized : not so related to background -> attach to general/local -> general -> Issue -> North Korea News, leader, USA, ...
+          d. local : Recommened North Korea stuff, travel agency, resturant, etc.
+          e. local : North Korea community in Sweden
+          f. general : Flag+leader(mixed) - dictionary(wiki, history, map, etc.)
+          g. etc   : Band, Song, TV, Youtube, ...
+
+# ============================ Case 2 -> 7results ============================
+Background : Korea(local), engineer(field), Computer Science(study area), 40years old(generation)
+Query      : Mountain
+Return     :
+		  a. customized : Mountain Computer Inc/org(proper name) in local/general
+		(b). customized : semntic converter -> (background) mountain for computer -> fail
+											-> (background) computer for mountain -> fail (not significant result)
+											-> (background) laptop(closest word vector) for mountain   -> fail (not significant result)
+											-> (background) software(secod closest word vector) for mountain -> MountainsMap(Software) (Success)
+
+		  c. customized : not so related to background -> attach to general and local/general -> collection of news of mountain(flood, earthquake, etc.)
+		  d. local      : Recommened mountains (in local area)
+		(e). local      : Hiking community (in local area)
+		  f. general 	: Mountain(scenery pic) - dictionary(wiki, history, theory, etc.)
+		  g. etc. 		: Band, Song, TV, Youtube, ...
+
+
+# ============================ Case 3 -> 5results ============================
+Background : Anonymous(None)
+Query      : Mountain
+Return     :
+		  a. customized : Mountain Computer Inc/org(proper name) in local/general
+		  b. customized : not so related to background -> attach to general and local/general -> collection of news of mountain(flood, earthquake, etc.)
+		  c. local      : Recommened mountains (in local area)
+		  d. general 	: Mountain(scenery pic) - dictionary(wiki, history, theory, etc.)
+		  e. etc. 		: Band, Song, TV, Youtube, ...
+
+
+
+
+
+
 Query : (Animal)        Cat                     -> fluffy, cute cat, hunter, mouse, dog ...
 Query : (Country)       America                 -> flag, eagle, president, big companies, war, ...
 Query : (Ppl, language) Korean                  -> people, language, kpop, kdrama, apperance, ...
