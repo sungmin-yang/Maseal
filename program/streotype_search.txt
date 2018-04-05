@@ -49,6 +49,18 @@ Return     :
 
 
 
+# ============================ Case 4 -> 5results ============================
+Background : Anonymous(None)
+Query      : Markov
+Return     :
+		  a. customized(-> general) : Inc/org(proper name) in local/general -> Not strong info -> move to dictionary
+		  b. customized : not so related to background -> attach to general and local/general -> collection of news of mountain(flood, earthquake, etc.)
+		  c. local(-> gneneral) : Recommened mountains (in local area) -> Not strong info -> move to dictionary category
+		  d. general 	: Mountain(scenery pic) - dictionary(wiki, history, theory, etc.)
+		  e. etc. 		: Band, Song, TV, Youtube, ...
+
+
+
 
 
 
